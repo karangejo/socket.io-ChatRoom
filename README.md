@@ -1,3 +1,17 @@
+A Chat Room Web App created with socket.io and React.
+
+To try it out run the following commands:
+
+### node server.js
+
+This will start the socket.io server on localhost:8000
+Then run:
+
+### npm run start
+
+This will start the react client. If you really want to see the full functionality you should run this command again in another terminal and then answer yes when prompted to run the server on another port. Now both of the react apps should be able to see each other's messages!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
