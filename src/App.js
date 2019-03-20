@@ -41,16 +41,23 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <ul>
+      <div className="container" style={{width:'100%'}}>
+      <nav>
+         <div class="nav-wrapper" style={{backgroundColor:'#2d4059'}}>
+           <a href="#" class="brand-logo" style={{color:'#f07b3f'}}>Chat Room</a>
+         </div>
+       </nav>
+      <ul className="collection">
         {this.state.messages.map((item) => (
-          <li key={item}>{item}</li>
+          <li className="collection-item" key={item}>{item}</li>
        ))}
       </ul>
-      <form className="message" onSubmit={this.submitMessage}>
+      <div style={{position:'fixed',left:0,bottom:0,right:0,backgroundColor:'#ffd460'}}>
+      <form style={{margin:20}} className="message" onSubmit={this.submitMessage} >
         <input type="text" name="message" value={this.state.message} onChange={event => this.setState({message: event.target.value})}/>
-        <button type="submit" name="button">Message</button>
+        <button className="waves-effect wave-light btn" type="submit" name="button" style={{position:'fixed',right:10,backgroundColor:'#f07b3f'}}>Message</button>
       </form>
+      </div>
    </div>
     );
   }
